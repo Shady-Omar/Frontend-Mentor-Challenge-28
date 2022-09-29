@@ -12,7 +12,15 @@ toggle.addEventListener("click", (e) => {
         head.classList.toggle("dark-head", 
         toggle.querySelector("input[type=checkbox]").checked)
     }
-    
+
+
+    const overs = document.querySelectorAll('.overview');
+
+    for (const over of overs) {
+        over.classList.toggle("dark-over", 
+        toggle.querySelector("input[type=checkbox]").checked)
+    }
+
     const texts = document.querySelectorAll('.darken');
 
     for (const text of texts) {

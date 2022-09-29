@@ -9,7 +9,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(230, 17%, 14%);
     transition: 0.2s;
 }
 
@@ -36,13 +36,13 @@ main {
 
 .head .upper-text h1 {
     margin-bottom: 0;
-    color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
     
 }
 .head .upper-text p {
     margin-top: 5px;
     font-weight: 700;
-    color: hsl(228, 12%, 44%);
+    color: hsl(228, 34%, 66%);
 }
 
 .toggle {
@@ -53,7 +53,7 @@ main {
 
 .toggle p {
     font-weight: 700;
-    color: hsl(228, 12%, 44%);
+    color: hsl(228, 34%, 66%);
     font-size: 14px;
 }
 
@@ -79,7 +79,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: hsl(230, 22%, 74%);
+    background-image: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     -webkit-transition: .4s;
     transition: .4s;
 }
@@ -97,7 +97,7 @@ main {
 }
 
 input:checked + .slider {
-    background-image: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    background-image: linear-gradient(to right,hsl(230, 22%, 74%), hsl(230, 22%, 74%));
 }
 
 input:focus + .slider {
@@ -128,7 +128,7 @@ input:checked + .slider:before {
 }
 
 .top-blocks .block {
-    background-color: hsl(225, 100%, 98%);
+    background-color: hsl(228, 28%, 20%);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -138,7 +138,7 @@ input:checked + .slider:before {
 }
 
 .top-blocks .block:hover {
-    background-color: hsl(221, 20%, 84%);
+    background-color: hsl(230, 28%, 29%);
 }
 
 .top-blocks .block .tag {
@@ -150,20 +150,20 @@ input:checked + .slider:before {
 
 .top-blocks .block .tag span {
     margin-left: 5px;
-    color: hsl(228, 12%, 44%);
+    color: hsl(228, 34%, 66%);
     font-weight: 700;
     font-size: 11px;
 }
 
 .top-blocks .block h2 {
-    color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
     font-size: 3em;
     margin-bottom: 2px;
     margin-top: 13px;
 }
 
 .top-blocks .block p {
-    color: hsl(228, 12%, 44%);
+    color: hsl(228, 34%, 66%);
     margin: 0 auto;
     font-size: 12px;
     letter-spacing: 0.3em;
@@ -260,7 +260,7 @@ input:checked + .slider:before {
 
 .text {
     width: 75%;
-    color: hsl(228, 12%, 44%);
+    color: hsl(0, 0%, 100%);
     margin-top: 1rem;
 }
 
@@ -274,7 +274,7 @@ input:checked + .slider:before {
 }
 
 .bottom-blocks .blok {
-    background-color: hsl(225, 100%, 98%);
+    background-color: hsl(228, 28%, 20%);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -284,8 +284,7 @@ input:checked + .slider:before {
 }
 
 .bottom-blocks .blok:hover {
-    background-color: hsl(221, 20%, 84%);
-    
+    background-color: hsl(230, 28%, 29%);
 }
 
 .bottom-blocks .blok .title {
@@ -297,7 +296,7 @@ input:checked + .slider:before {
 }
 
 .bottom-blocks .blok .title span {
-    color: hsl(228, 12%, 44%);
+    color: hsl(228, 34%, 66%);
     font-weight: 700;
     font-size: 12px;
 }
@@ -312,7 +311,7 @@ input:checked + .slider:before {
 }
 
 .bottom-blocks .blok .nums h3 {
-    color: hsl(230, 17%, 14%);
+    color: hsl(0, 0%, 100%);
     font-size: 1.5em;
     margin: 0;
 }
@@ -356,23 +355,27 @@ input:checked + .slider:before {
 
 /* Dark Mode using JS */
 .dark-mode {
-    background-color: hsl(230, 17%, 14%) !important;
+    background-color: hsl(0, 0%, 100%) !important;
 }
 
 .dark-head {
-    color: hsl(0, 0%, 100%) !important;
+    color: hsl(230, 17%, 14%) !important;
+}
+
+.dark-over {
+    color: hsl(228, 12%, 44%);
 }
 
 .dark-text {
-    color: hsl(228, 34%, 66%) !important;
+    color: hsl(228, 12%, 44%) !important;
 }
 
 .dark-block {
-    background-color:  hsl(228, 28%, 20%) !important;
+    background-color:  hsl(225, 100%, 98%) !important;
 }
 
 .dark-block:hover {
-    background-color:  hsl(230, 28%, 29%) !important;
+    background-color:  hsl(221, 20%, 84%) !important;
 }
 
 @media (max-width: 767px) {
