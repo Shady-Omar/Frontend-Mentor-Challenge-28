@@ -1,0 +1,439 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden; 
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 100%);
+    transition: 0.2s;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head .upper-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.head .upper-text h1 {
+    margin-bottom: 0;
+    color: hsl(230, 17%, 14%);
+    
+}
+.head .upper-text p {
+    margin-top: 5px;
+    font-weight: 700;
+    color: hsl(228, 12%, 44%);
+}
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.toggle p {
+    font-weight: 700;
+    color: hsl(228, 12%, 44%);
+    font-size: 14px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    transform: scale(0.8);
+    margin-left: 5px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(230, 22%, 74%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-image: linear-gradient(to right,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.top-blocks {
+    display: grid;
+    width: 75%;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 175px;
+    margin-top: 1rem;
+}
+
+.top-blocks .block {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.top-blocks .block:hover {
+    background-color: hsl(221, 20%, 84%);
+}
+
+.top-blocks .block .tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.top-blocks .block .tag span {
+    margin-left: 5px;
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.top-blocks .block h2 {
+    color: hsl(230, 17%, 14%);
+    font-size: 3em;
+    margin-bottom: 2px;
+    margin-top: 13px;
+}
+
+.top-blocks .block p {
+    color: hsl(228, 12%, 44%);
+    margin: 0 auto;
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    margin-bottom: 1rem;
+}
+
+.top-blocks .block .count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top-blocks .block .count span {
+    margin-left: 5px;
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.facebook {
+    position: relative;
+}
+
+.facebook::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: hsl(208, 92%, 53%);
+    height: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 0;
+}
+
+.facebook .count span {
+    color: hsl(163, 72%, 41%);
+}
+
+.twitter {
+    position: relative;
+}
+
+.twitter::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: hsl(203, 89%, 53%);
+    height: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 0;
+}
+
+.twitter .count span {
+    color: hsl(163, 72%, 41%);
+}
+
+.insta {
+    position: relative;
+}
+
+.insta::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-image: linear-gradient(to right,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+    height: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 0;
+}
+
+.insta .count span {
+    color: hsl(163, 72%, 41%);
+}
+
+.youtube {
+    position: relative;
+}
+
+.youtube::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: hsl(348, 97%, 39%);
+    height: 4px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    top: 0;
+}
+
+.youtube .count span {
+    color: hsl(356, 69%, 56%);
+}
+
+.text {
+    width: 75%;
+    color: hsl(228, 12%, 44%);
+    margin-top: 1rem;
+}
+
+.bottom-blocks {
+    display: grid;
+    width: 75%;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 115px 115px;
+    margin-bottom: 2rem;
+}
+
+.bottom-blocks .blok {
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.bottom-blocks .blok:hover {
+    background-color: hsl(221, 20%, 84%);
+    
+}
+
+.bottom-blocks .blok .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+}
+
+.bottom-blocks .blok .title span {
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.bottom-blocks .blok .nums {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.bottom-blocks .blok .nums h3 {
+    color: hsl(230, 17%, 14%);
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.bottom-blocks .blok .nums span {
+    font-weight: 700;
+    font-size: 11px;
+}
+
+.bottom-blocks .face-page .nums span {
+    color: hsl(163, 72%, 41%);
+}
+
+.bottom-blocks .face-like .nums span {
+    color: hsl(356, 69%, 56%);
+}
+
+.bottom-blocks .insta-like .nums span {
+    color: hsl(163, 72%, 41%);
+}
+
+.bottom-blocks .insta-view .nums span {
+    color: hsl(163, 72%, 41%);
+}
+
+.bottom-blocks .twitter-retweet .nums span {
+    color: hsl(163, 72%, 41%);
+}
+
+.bottom-blocks .twitter-like .nums span {
+    color: hsl(163, 72%, 41%);
+}
+
+.bottom-blocks .youtube-like .nums span {
+    color: hsl(356, 69%, 56%);
+}
+
+.bottom-blocks .youtuube-view .nums span {
+    color: hsl(356, 69%, 56%);
+}
+
+/* Dark Mode using JS */
+.dark-mode {
+    background-color: hsl(230, 17%, 14%) !important;
+}
+
+.dark-head {
+    color: hsl(0, 0%, 100%) !important;
+}
+
+.dark-text {
+    color: hsl(228, 34%, 66%) !important;
+}
+
+.dark-block {
+    background-color:  hsl(228, 28%, 20%) !important;
+}
+
+.dark-block:hover {
+    background-color:  hsl(230, 28%, 29%) !important;
+}
+
+@media (max-width: 767px) {
+    body {
+        justify-content: normal;
+    }
+
+    main {
+        max-width: 100%;
+        min-width:375px;
+    }
+
+    .head {
+        width: 85%;
+        margin-top: 1.5rem;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .head .upper-text {
+        width: 100%;
+        border-bottom: 1px solid black;
+        margin-bottom: 0.4rem;
+    }
+
+    .head .upper-text h1 {
+        font-size: 1.5em;
+    }
+
+    .toggle {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .top-blocks {
+        width: 85%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+
+    .top-blocks .block p {
+        margin-bottom: 1.3rem;
+    }
+
+    .text {
+        width: 85%;
+    }
+
+    .bottom-blocks {
+        width: 85%;
+        gap: 25px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:  repeat(8, 115px);
+        margin-bottom: 2rem;
+    }
+
+    .bottom-blocks .blok .title span {
+        font-size: 14px;
+    }
+
+    .bottom-blocks .blok .nums span {
+        font-size: 13px;
+    }
+}
